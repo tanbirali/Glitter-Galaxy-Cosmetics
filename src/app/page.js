@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
@@ -21,28 +22,7 @@ export default function Home() {
           blush&nbsp;,&nbsp;flat&nbsp;30%&nbsp;off.
         </marquee>
       </div>
-      <div className="h-12 w-full bg-white grid grid-cols-2 lg:grid-cols-3 items-center">
-        <div></div>
-        <Link href={"/"}>
-          <Image
-            src={"/images/cropped-logo.webp"}
-            width={310}
-            height={200}
-            alt="logo"
-          />
-        </Link>
-        <div>
-          <div className="flex space-x-5">
-            <Link
-              href={"/carts"}
-              className="flex space-x-5 font-bold hover:text-pink-300"
-            >
-              <p className="font-bold">₹ 0.00</p> <ShoppingBagIcon />
-            </Link>
-            <User />
-          </div>
-        </div>
-      </div>
+      <Navbar />
       <div className="h-14 bg-pink-200 flex justify-center items-center">
         <Header />
       </div>
@@ -85,7 +65,7 @@ export default function Home() {
         />
       </div>
       <div className="bg-violet-200 flex p-12">
-        <div className="flex justify-between">
+        <div className="flex w-full justify-between">
           <div className="flex items-center space-x-8 ">
             <Image
               src={"/images/insta-logo.jpg"}
@@ -99,7 +79,9 @@ export default function Home() {
             </div>
           </div>
           <div className="flex">
-            <button className="text-white bg-blue-400 p-4">Follow</button>
+            <button className="text-white bg-blue-800 h-10 p-2 rounded-md">
+              Follow
+            </button>
           </div>
         </div>
       </div>
